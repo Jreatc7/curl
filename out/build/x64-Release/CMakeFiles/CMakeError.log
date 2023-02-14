@@ -1,0 +1,3084 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b7856 && [1/2] Building C object CMakeFiles\cmTC_b7856.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_b7856.dir/src.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_b7856.dir\src.c.obj /FdCMakeFiles\cmTC_b7856.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\src.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_e0b43 && [1/2] Building C object CMakeFiles\cmTC_e0b43.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_e0b43.exe
+FAILED: cmTC_e0b43.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_e0b43.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_e0b43.dir\CheckFunctionExists.c.obj  /out:cmTC_e0b43.exe /implib:cmTC_e0b43.lib /pdb:cmTC_e0b43.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_e0b43.dir\CheckFunctionExists.c.obj /out:cmTC_e0b43.exe /implib:cmTC_e0b43.lib /pdb:cmTC_e0b43.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_e0b43.dir/intermediate.manifest CMakeFiles\cmTC_e0b43.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'pthreads.lib'
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_dd31d && [1/2] Building C object CMakeFiles\cmTC_dd31d.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_dd31d.exe
+FAILED: cmTC_dd31d.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_dd31d.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_dd31d.dir\CheckFunctionExists.c.obj  /out:cmTC_dd31d.exe /implib:cmTC_dd31d.lib /pdb:cmTC_dd31d.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_dd31d.dir\CheckFunctionExists.c.obj /out:cmTC_dd31d.exe /implib:cmTC_dd31d.lib /pdb:cmTC_dd31d.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_dd31d.dir/intermediate.manifest CMakeFiles\cmTC_dd31d.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'pthread.lib'
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files ;winldap.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9bfbb && [1/2] Building C object CMakeFiles\cmTC_9bfbb.dir\HAVE_WINLDAP_H.c.obj
+FAILED: CMakeFiles/cmTC_9bfbb.dir/HAVE_WINLDAP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_9bfbb.dir\HAVE_WINLDAP_H.c.obj /FdCMakeFiles\cmTC_9bfbb.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_WINLDAP_H.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winnt.h(169): fatal error C1189: #error:  "No Target Architecture"
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <winldap.h>
+
+
+int main(void){return 0;}
+
+Determining if files ;ldap_ssl.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_784bd && [1/2] Building C object CMakeFiles\cmTC_784bd.dir\HAVE_LDAP_SSL_H.c.obj
+FAILED: CMakeFiles/cmTC_784bd.dir/HAVE_LDAP_SSL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_784bd.dir\HAVE_LDAP_SSL_H.c.obj /FdCMakeFiles\cmTC_784bd.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_LDAP_SSL_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_LDAP_SSL_H.c(2): fatal error C1083: Cannot open include file: 'ldap_ssl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <ldap_ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if the function idn2_lookup_ul exists in the idn2;wldap32;winmm;ws2_32 failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_abd91 && [1/2] Building C object CMakeFiles\cmTC_abd91.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_abd91.exe
+FAILED: cmTC_abd91.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_abd91.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_abd91.dir\CheckFunctionExists.c.obj  /out:cmTC_abd91.exe /implib:cmTC_abd91.lib /pdb:cmTC_abd91.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  idn2.lib  wldap32.lib  winmm.lib  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_abd91.dir\CheckFunctionExists.c.obj /out:cmTC_abd91.exe /implib:cmTC_abd91.lib /pdb:cmTC_abd91.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console idn2.lib wldap32.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_abd91.dir/intermediate.manifest CMakeFiles\cmTC_abd91.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'idn2.lib'
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/filio.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_73b32 && [1/2] Building C object CMakeFiles\cmTC_73b32.dir\HAVE_SYS_FILIO_H.c.obj
+FAILED: CMakeFiles/cmTC_73b32.dir/HAVE_SYS_FILIO_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_73b32.dir\HAVE_SYS_FILIO_H.c.obj /FdCMakeFiles\cmTC_73b32.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_FILIO_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_FILIO_H.c(6): fatal error C1083: Cannot open include file: 'sys/filio.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/filio.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/ioctl.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d3e46 && [1/2] Building C object CMakeFiles\cmTC_d3e46.dir\HAVE_SYS_IOCTL_H.c.obj
+FAILED: CMakeFiles/cmTC_d3e46.dir/HAVE_SYS_IOCTL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_d3e46.dir\HAVE_SYS_IOCTL_H.c.obj /FdCMakeFiles\cmTC_d3e46.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c(6): fatal error C1083: Cannot open include file: 'sys/ioctl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/ioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/resource.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_1aa51 && [1/2] Building C object CMakeFiles\cmTC_1aa51.dir\HAVE_SYS_RESOURCE_H.c.obj
+FAILED: CMakeFiles/cmTC_1aa51.dir/HAVE_SYS_RESOURCE_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_1aa51.dir\HAVE_SYS_RESOURCE_H.c.obj /FdCMakeFiles\cmTC_1aa51.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_RESOURCE_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_RESOURCE_H.c(6): fatal error C1083: Cannot open include file: 'sys/resource.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/resource.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/un.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_14ae1 && [1/2] Building C object CMakeFiles\cmTC_14ae1.dir\HAVE_SYS_UN_H.c.obj
+FAILED: CMakeFiles/cmTC_14ae1.dir/HAVE_SYS_UN_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_14ae1.dir\HAVE_SYS_UN_H.c.obj /FdCMakeFiles\cmTC_14ae1.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UN_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UN_H.c(8): fatal error C1083: Cannot open include file: 'sys/un.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/un.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;sys/xattr.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_1a54d && [1/2] Building C object CMakeFiles\cmTC_1a54d.dir\HAVE_SYS_XATTR_H.c.obj
+FAILED: CMakeFiles/cmTC_1a54d.dir/HAVE_SYS_XATTR_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_1a54d.dir\HAVE_SYS_XATTR_H.c.obj /FdCMakeFiles\cmTC_1a54d.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_XATTR_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_XATTR_H.c(9): fatal error C1083: Cannot open include file: 'sys/xattr.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <sys/xattr.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;arpa/tftp.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_383c1 && [1/2] Building C object CMakeFiles\cmTC_383c1.dir\HAVE_ARPA_TFTP_H.c.obj
+FAILED: CMakeFiles/cmTC_383c1.dir/HAVE_ARPA_TFTP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_383c1.dir\HAVE_ARPA_TFTP_H.c.obj /FdCMakeFiles\cmTC_383c1.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_TFTP_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_TFTP_H.c(9): fatal error C1083: Cannot open include file: 'arpa/tftp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <arpa/tftp.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;idn2.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c69f2 && [1/2] Building C object CMakeFiles\cmTC_c69f2.dir\HAVE_IDN2_H.c.obj
+FAILED: CMakeFiles/cmTC_c69f2.dir/HAVE_IDN2_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_c69f2.dir\HAVE_IDN2_H.c.obj /FdCMakeFiles\cmTC_c69f2.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_IDN2_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_IDN2_H.c(12): fatal error C1083: Cannot open include file: 'idn2.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn2.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;ifaddrs.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_e1d23 && [1/2] Building C object CMakeFiles\cmTC_e1d23.dir\HAVE_IFADDRS_H.c.obj
+FAILED: CMakeFiles/cmTC_e1d23.dir/HAVE_IFADDRS_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_e1d23.dir\HAVE_IFADDRS_H.c.obj /FdCMakeFiles\cmTC_e1d23.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_IFADDRS_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_IFADDRS_H.c(12): fatal error C1083: Cannot open include file: 'ifaddrs.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;libgen.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_bc014 && [1/2] Building C object CMakeFiles\cmTC_bc014.dir\HAVE_LIBGEN_H.c.obj
+FAILED: CMakeFiles/cmTC_bc014.dir/HAVE_LIBGEN_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_bc014.dir\HAVE_LIBGEN_H.c.obj /FdCMakeFiles\cmTC_bc014.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_LIBGEN_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_LIBGEN_H.c(13): fatal error C1083: Cannot open include file: 'libgen.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <libgen.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;netinet/tcp.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c63d6 && [1/2] Building C object CMakeFiles\cmTC_c63d6.dir\HAVE_NETINET_TCP_H.c.obj
+FAILED: CMakeFiles/cmTC_c63d6.dir/HAVE_NETINET_TCP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_c63d6.dir\HAVE_NETINET_TCP_H.c.obj /FdCMakeFiles\cmTC_c63d6.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c(14): fatal error C1083: Cannot open include file: 'netinet/tcp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <netinet/tcp.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file linux/tcp.h exists failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_739b8 && [1/2] Building C object CMakeFiles\cmTC_739b8.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_739b8.dir/CheckIncludeFile.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_739b8.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_739b8.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'linux/tcp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;poll.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_68d23 && [1/2] Building C object CMakeFiles\cmTC_68d23.dir\HAVE_POLL_H.c.obj
+FAILED: CMakeFiles/cmTC_68d23.dir/HAVE_POLL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_68d23.dir\HAVE_POLL_H.c.obj /FdCMakeFiles\cmTC_68d23.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_POLL_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_POLL_H.c(14): fatal error C1083: Cannot open include file: 'poll.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <poll.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;ssl.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_29d6b && [1/2] Building C object CMakeFiles\cmTC_29d6b.dir\HAVE_SSL_H.c.obj
+FAILED: CMakeFiles/cmTC_29d6b.dir/HAVE_SSL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_29d6b.dir\HAVE_SSL_H.c.obj /FdCMakeFiles\cmTC_29d6b.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SSL_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SSL_H.c(16): fatal error C1083: Cannot open include file: 'ssl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdatomic.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_55aef && [1/2] Building C object CMakeFiles\cmTC_55aef.dir\HAVE_STDATOMIC_H.c.obj
+FAILED: CMakeFiles/cmTC_55aef.dir/HAVE_STDATOMIC_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_55aef.dir\HAVE_STDATOMIC_H.c.obj /FdCMakeFiles\cmTC_55aef.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_STDATOMIC_H.c
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdatomic.h(15): fatal error C1189: #error:  <stdatomic.h> is not yet supported when compiling as C, but this is planned for a future release.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdatomic.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdlib.h;string.h;stropts.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a3a43 && [1/2] Building C object CMakeFiles\cmTC_a3a43.dir\HAVE_STROPTS_H.c.obj
+FAILED: CMakeFiles/cmTC_a3a43.dir/HAVE_STROPTS_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_a3a43.dir\HAVE_STROPTS_H.c.obj /FdCMakeFiles\cmTC_a3a43.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c(19): fatal error C1083: Cannot open include file: 'stropts.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdlib.h;string.h;time.h;unistd.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_4f6f5 && [1/2] Building C object CMakeFiles\cmTC_4f6f5.dir\HAVE_UNISTD_H.c.obj
+FAILED: CMakeFiles/cmTC_4f6f5.dir/HAVE_UNISTD_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_4f6f5.dir\HAVE_UNISTD_H.c.obj /FdCMakeFiles\cmTC_4f6f5.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c(20): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdlib.h;string.h;time.h;stddef.h;sys/utsname.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3f505 && [1/2] Building C object CMakeFiles\cmTC_3f505.dir\HAVE_SYS_UTSNAME_H.c.obj
+FAILED: CMakeFiles/cmTC_3f505.dir/HAVE_SYS_UTSNAME_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_3f505.dir\HAVE_SYS_UTSNAME_H.c.obj /FdCMakeFiles\cmTC_3f505.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UTSNAME_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UTSNAME_H.c(21): fatal error C1083: Cannot open include file: 'sys/utsname.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+#include <sys/utsname.h>
+
+
+int main(void){return 0;}
+
+Determining size of ssize_t failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_65fb1 && [1/2] Building C object CMakeFiles\cmTC_65fb1.dir\SIZEOF_SSIZE_T.c.obj
+FAILED: CMakeFiles/cmTC_65fb1.dir/SIZEOF_SSIZE_T.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_65fb1.dir\SIZEOF_SSIZE_T.c.obj /FdCMakeFiles\cmTC_65fb1.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(28): error C2065: 'ssize_t': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(29): error C2065: 'ssize_t': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(30): error C2065: 'ssize_t': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(31): error C2065: 'ssize_t': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(32): error C2065: 'ssize_t': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CheckTypeSize/SIZEOF_SSIZE_T.c:
+#include <sys/types.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ssize_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the fchmod exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_34168 && [1/2] Building C object CMakeFiles\cmTC_34168.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_34168.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_34168.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_34168.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'fchmod': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fchmod
+  return ((int*)(&fchmod))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the basename exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b7838 && [1/2] Building C object CMakeFiles\cmTC_b7838.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_b7838.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_b7838.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_b7838.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'basename': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef basename
+  return ((int*)(&basename))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the socketpair exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_78fc7 && [1/2] Building C object CMakeFiles\cmTC_78fc7.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_78fc7.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_78fc7.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_78fc7.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'socketpair': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef socketpair
+  return ((int*)(&socketpair))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strtok_r exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_605bd && [1/2] Building C object CMakeFiles\cmTC_605bd.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_605bd.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_605bd.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_605bd.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'strtok_r': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtok_r
+  return ((int*)(&strtok_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcasecmp exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_bcc3e && [1/2] Building C object CMakeFiles\cmTC_bcc3e.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_bcc3e.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_bcc3e.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_bcc3e.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'strcasecmp': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasecmp
+  return ((int*)(&strcasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the alarm exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_67544 && [1/2] Building C object CMakeFiles\cmTC_67544.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_67544.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_67544.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_67544.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'alarm': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alarm
+  return ((int*)(&alarm))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getppid exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_83b62 && [1/2] Building C object CMakeFiles\cmTC_83b62.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_83b62.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_83b62.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_83b62.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'getppid': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getppid
+  return ((int*)(&getppid))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the utimes exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_956df && [1/2] Building C object CMakeFiles\cmTC_956df.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_956df.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_956df.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_956df.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'utimes': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef utimes
+  return ((int*)(&utimes))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getpwuid_r exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2faec && [1/2] Building C object CMakeFiles\cmTC_2faec.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_2faec.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_2faec.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_2faec.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'getpwuid_r': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpwuid_r
+  return ((int*)(&getpwuid_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strerror_r exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5c46e && [1/2] Building C object CMakeFiles\cmTC_5c46e.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_5c46e.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_5c46e.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_5c46e.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'strerror_r': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strerror_r
+  return ((int*)(&strerror_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the siginterrupt exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_4820d && [1/2] Building C object CMakeFiles\cmTC_4820d.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_4820d.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_4820d.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_4820d.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'siginterrupt': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef siginterrupt
+  return ((int*)(&siginterrupt))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the pipe exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_07958 && [1/2] Building C object CMakeFiles\cmTC_07958.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_07958.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_07958.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_07958.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'pipe': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pipe
+  return ((int*)(&pipe))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the ftruncate exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f3c5f && [1/2] Building C object CMakeFiles\cmTC_f3c5f.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_f3c5f.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_f3c5f.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_f3c5f.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'ftruncate': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ftruncate
+  return ((int*)(&ftruncate))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the if_nametoindex exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b7b0d && [1/2] Building C object CMakeFiles\cmTC_b7b0d.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_b7b0d.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_b7b0d.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_b7b0d.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'if_nametoindex': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef if_nametoindex
+  return ((int*)(&if_nametoindex))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getrlimit exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b3285 && [1/2] Building C object CMakeFiles\cmTC_b3285.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_b3285.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_b3285.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_b3285.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'getrlimit': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrlimit
+  return ((int*)(&getrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setrlimit exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_cc2bf && [1/2] Building C object CMakeFiles\cmTC_cc2bf.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_cc2bf.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_cc2bf.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_cc2bf.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'setrlimit': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setrlimit
+  return ((int*)(&setrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the snprintf exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_988d9 && [1/2] Building C object CMakeFiles\cmTC_988d9.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_988d9.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_988d9.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_988d9.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'snprintf': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef snprintf
+  return ((int*)(&snprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function mach_absolute_time exists failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5a137 && [1/2] Building C object CMakeFiles\cmTC_5a137.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_5a137.exe
+FAILED: cmTC_5a137.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_5a137.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_5a137.dir\CheckFunctionExists.c.obj  /out:cmTC_5a137.exe /implib:cmTC_5a137.lib /pdb:cmTC_5a137.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_5a137.dir\CheckFunctionExists.c.obj /out:cmTC_5a137.exe /implib:cmTC_5a137.lib /pdb:cmTC_5a137.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_5a137.dir/intermediate.manifest CMakeFiles\cmTC_5a137.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol mach_absolute_time referenced in function main
+cmTC_5a137.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_71d66 && [1/2] Building C object CMakeFiles\cmTC_71d66.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_71d66.dir/src.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_71d66.dir\src.c.obj /FdCMakeFiles\cmTC_71d66.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\src.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6dc91 && [1/2] Building C object CMakeFiles\cmTC_6dc91.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_6dc91.exe
+FAILED: cmTC_6dc91.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_6dc91.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_6dc91.dir\CheckFunctionExists.c.obj  /out:cmTC_6dc91.exe /implib:cmTC_6dc91.lib /pdb:cmTC_6dc91.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_6dc91.dir\CheckFunctionExists.c.obj /out:cmTC_6dc91.exe /implib:cmTC_6dc91.lib /pdb:cmTC_6dc91.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_6dc91.dir/intermediate.manifest CMakeFiles\cmTC_6dc91.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'pthreads.lib'
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_8a13f && [1/2] Building C object CMakeFiles\cmTC_8a13f.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_8a13f.exe
+FAILED: cmTC_8a13f.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_8a13f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_8a13f.dir\CheckFunctionExists.c.obj  /out:cmTC_8a13f.exe /implib:cmTC_8a13f.lib /pdb:cmTC_8a13f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_8a13f.dir\CheckFunctionExists.c.obj /out:cmTC_8a13f.exe /implib:cmTC_8a13f.lib /pdb:cmTC_8a13f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_8a13f.dir/intermediate.manifest CMakeFiles\cmTC_8a13f.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'pthread.lib'
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files ;winldap.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d62ba && [1/2] Building C object CMakeFiles\cmTC_d62ba.dir\HAVE_WINLDAP_H.c.obj
+FAILED: CMakeFiles/cmTC_d62ba.dir/HAVE_WINLDAP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_d62ba.dir\HAVE_WINLDAP_H.c.obj /FdCMakeFiles\cmTC_d62ba.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_WINLDAP_H.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winnt.h(169): fatal error C1189: #error:  "No Target Architecture"
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <winldap.h>
+
+
+int main(void){return 0;}
+
+Determining if files ;ldap_ssl.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_7d3c6 && [1/2] Building C object CMakeFiles\cmTC_7d3c6.dir\HAVE_LDAP_SSL_H.c.obj
+FAILED: CMakeFiles/cmTC_7d3c6.dir/HAVE_LDAP_SSL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_7d3c6.dir\HAVE_LDAP_SSL_H.c.obj /FdCMakeFiles\cmTC_7d3c6.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_LDAP_SSL_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_LDAP_SSL_H.c(2): fatal error C1083: Cannot open include file: 'ldap_ssl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <ldap_ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if the function idn2_lookup_ul exists in the idn2;wldap32;winmm;ws2_32 failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2ee5f && [1/2] Building C object CMakeFiles\cmTC_2ee5f.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_2ee5f.exe
+FAILED: cmTC_2ee5f.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_2ee5f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_2ee5f.dir\CheckFunctionExists.c.obj  /out:cmTC_2ee5f.exe /implib:cmTC_2ee5f.lib /pdb:cmTC_2ee5f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  idn2.lib  wldap32.lib  winmm.lib  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_2ee5f.dir\CheckFunctionExists.c.obj /out:cmTC_2ee5f.exe /implib:cmTC_2ee5f.lib /pdb:cmTC_2ee5f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console idn2.lib wldap32.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_2ee5f.dir/intermediate.manifest CMakeFiles\cmTC_2ee5f.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'idn2.lib'
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/filio.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_20b11 && [1/2] Building C object CMakeFiles\cmTC_20b11.dir\HAVE_SYS_FILIO_H.c.obj
+FAILED: CMakeFiles/cmTC_20b11.dir/HAVE_SYS_FILIO_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_20b11.dir\HAVE_SYS_FILIO_H.c.obj /FdCMakeFiles\cmTC_20b11.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_FILIO_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_FILIO_H.c(6): fatal error C1083: Cannot open include file: 'sys/filio.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/filio.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/ioctl.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_4ab72 && [1/2] Building C object CMakeFiles\cmTC_4ab72.dir\HAVE_SYS_IOCTL_H.c.obj
+FAILED: CMakeFiles/cmTC_4ab72.dir/HAVE_SYS_IOCTL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_4ab72.dir\HAVE_SYS_IOCTL_H.c.obj /FdCMakeFiles\cmTC_4ab72.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c(6): fatal error C1083: Cannot open include file: 'sys/ioctl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/ioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/resource.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_e229d && [1/2] Building C object CMakeFiles\cmTC_e229d.dir\HAVE_SYS_RESOURCE_H.c.obj
+FAILED: CMakeFiles/cmTC_e229d.dir/HAVE_SYS_RESOURCE_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_e229d.dir\HAVE_SYS_RESOURCE_H.c.obj /FdCMakeFiles\cmTC_e229d.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_RESOURCE_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_RESOURCE_H.c(6): fatal error C1083: Cannot open include file: 'sys/resource.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/resource.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/un.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_4a36b && [1/2] Building C object CMakeFiles\cmTC_4a36b.dir\HAVE_SYS_UN_H.c.obj
+FAILED: CMakeFiles/cmTC_4a36b.dir/HAVE_SYS_UN_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_4a36b.dir\HAVE_SYS_UN_H.c.obj /FdCMakeFiles\cmTC_4a36b.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UN_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UN_H.c(8): fatal error C1083: Cannot open include file: 'sys/un.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/un.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;sys/xattr.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_96d9f && [1/2] Building C object CMakeFiles\cmTC_96d9f.dir\HAVE_SYS_XATTR_H.c.obj
+FAILED: CMakeFiles/cmTC_96d9f.dir/HAVE_SYS_XATTR_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_96d9f.dir\HAVE_SYS_XATTR_H.c.obj /FdCMakeFiles\cmTC_96d9f.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_XATTR_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_XATTR_H.c(9): fatal error C1083: Cannot open include file: 'sys/xattr.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <sys/xattr.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;arpa/tftp.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_cab84 && [1/2] Building C object CMakeFiles\cmTC_cab84.dir\HAVE_ARPA_TFTP_H.c.obj
+FAILED: CMakeFiles/cmTC_cab84.dir/HAVE_ARPA_TFTP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_cab84.dir\HAVE_ARPA_TFTP_H.c.obj /FdCMakeFiles\cmTC_cab84.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_TFTP_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_TFTP_H.c(9): fatal error C1083: Cannot open include file: 'arpa/tftp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <arpa/tftp.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;idn2.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0ff43 && [1/2] Building C object CMakeFiles\cmTC_0ff43.dir\HAVE_IDN2_H.c.obj
+FAILED: CMakeFiles/cmTC_0ff43.dir/HAVE_IDN2_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_0ff43.dir\HAVE_IDN2_H.c.obj /FdCMakeFiles\cmTC_0ff43.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_IDN2_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_IDN2_H.c(12): fatal error C1083: Cannot open include file: 'idn2.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn2.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;ifaddrs.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c622b && [1/2] Building C object CMakeFiles\cmTC_c622b.dir\HAVE_IFADDRS_H.c.obj
+FAILED: CMakeFiles/cmTC_c622b.dir/HAVE_IFADDRS_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_c622b.dir\HAVE_IFADDRS_H.c.obj /FdCMakeFiles\cmTC_c622b.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_IFADDRS_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_IFADDRS_H.c(12): fatal error C1083: Cannot open include file: 'ifaddrs.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;libgen.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_12fa5 && [1/2] Building C object CMakeFiles\cmTC_12fa5.dir\HAVE_LIBGEN_H.c.obj
+FAILED: CMakeFiles/cmTC_12fa5.dir/HAVE_LIBGEN_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_12fa5.dir\HAVE_LIBGEN_H.c.obj /FdCMakeFiles\cmTC_12fa5.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_LIBGEN_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_LIBGEN_H.c(13): fatal error C1083: Cannot open include file: 'libgen.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <libgen.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;netinet/tcp.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_dbdba && [1/2] Building C object CMakeFiles\cmTC_dbdba.dir\HAVE_NETINET_TCP_H.c.obj
+FAILED: CMakeFiles/cmTC_dbdba.dir/HAVE_NETINET_TCP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_dbdba.dir\HAVE_NETINET_TCP_H.c.obj /FdCMakeFiles\cmTC_dbdba.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c(14): fatal error C1083: Cannot open include file: 'netinet/tcp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <netinet/tcp.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file linux/tcp.h exists failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c97cc && [1/2] Building C object CMakeFiles\cmTC_c97cc.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_c97cc.dir/CheckIncludeFile.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_c97cc.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_c97cc.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'linux/tcp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;poll.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_4ba4a && [1/2] Building C object CMakeFiles\cmTC_4ba4a.dir\HAVE_POLL_H.c.obj
+FAILED: CMakeFiles/cmTC_4ba4a.dir/HAVE_POLL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_4ba4a.dir\HAVE_POLL_H.c.obj /FdCMakeFiles\cmTC_4ba4a.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_POLL_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_POLL_H.c(14): fatal error C1083: Cannot open include file: 'poll.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <poll.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;ssl.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9ba48 && [1/2] Building C object CMakeFiles\cmTC_9ba48.dir\HAVE_SSL_H.c.obj
+FAILED: CMakeFiles/cmTC_9ba48.dir/HAVE_SSL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_9ba48.dir\HAVE_SSL_H.c.obj /FdCMakeFiles\cmTC_9ba48.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SSL_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SSL_H.c(16): fatal error C1083: Cannot open include file: 'ssl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdatomic.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_798c5 && [1/2] Building C object CMakeFiles\cmTC_798c5.dir\HAVE_STDATOMIC_H.c.obj
+FAILED: CMakeFiles/cmTC_798c5.dir/HAVE_STDATOMIC_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_798c5.dir\HAVE_STDATOMIC_H.c.obj /FdCMakeFiles\cmTC_798c5.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_STDATOMIC_H.c
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\stdatomic.h(15): fatal error C1189: #error:  <stdatomic.h> is not yet supported when compiling as C, but this is planned for a future release.
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdatomic.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdlib.h;string.h;stropts.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6f664 && [1/2] Building C object CMakeFiles\cmTC_6f664.dir\HAVE_STROPTS_H.c.obj
+FAILED: CMakeFiles/cmTC_6f664.dir/HAVE_STROPTS_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_6f664.dir\HAVE_STROPTS_H.c.obj /FdCMakeFiles\cmTC_6f664.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c(19): fatal error C1083: Cannot open include file: 'stropts.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stropts.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdlib.h;string.h;time.h;unistd.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_184a1 && [1/2] Building C object CMakeFiles\cmTC_184a1.dir\HAVE_UNISTD_H.c.obj
+FAILED: CMakeFiles/cmTC_184a1.dir/HAVE_UNISTD_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_184a1.dir\HAVE_UNISTD_H.c.obj /FdCMakeFiles\cmTC_184a1.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_UNISTD_H.c(20): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <unistd.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdlib.h;string.h;time.h;stddef.h;sys/utsname.h exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_40faa && [1/2] Building C object CMakeFiles\cmTC_40faa.dir\HAVE_SYS_UTSNAME_H.c.obj
+FAILED: CMakeFiles/cmTC_40faa.dir/HAVE_SYS_UTSNAME_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_40faa.dir\HAVE_SYS_UTSNAME_H.c.obj /FdCMakeFiles\cmTC_40faa.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UTSNAME_H.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UTSNAME_H.c(21): fatal error C1083: Cannot open include file: 'sys/utsname.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+#include <sys/utsname.h>
+
+
+int main(void){return 0;}
+
+Determining size of ssize_t failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_06865 && [1/2] Building C object CMakeFiles\cmTC_06865.dir\SIZEOF_SSIZE_T.c.obj
+FAILED: CMakeFiles/cmTC_06865.dir/SIZEOF_SSIZE_T.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_06865.dir\SIZEOF_SSIZE_T.c.obj /FdCMakeFiles\cmTC_06865.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(28): error C2065: 'ssize_t': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(29): error C2065: 'ssize_t': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(30): error C2065: 'ssize_t': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(31): error C2065: 'ssize_t': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SSIZE_T.c(32): error C2065: 'ssize_t': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CheckTypeSize/SIZEOF_SSIZE_T.c:
+#include <sys/types.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ssize_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the fchmod exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b8b12 && [1/2] Building C object CMakeFiles\cmTC_b8b12.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_b8b12.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_b8b12.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_b8b12.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'fchmod': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fchmod
+  return ((int*)(&fchmod))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the basename exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0a069 && [1/2] Building C object CMakeFiles\cmTC_0a069.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_0a069.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_0a069.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_0a069.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'basename': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef basename
+  return ((int*)(&basename))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the socketpair exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ce3a4 && [1/2] Building C object CMakeFiles\cmTC_ce3a4.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_ce3a4.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_ce3a4.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_ce3a4.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'socketpair': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef socketpair
+  return ((int*)(&socketpair))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strtok_r exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_cd551 && [1/2] Building C object CMakeFiles\cmTC_cd551.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_cd551.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_cd551.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_cd551.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'strtok_r': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtok_r
+  return ((int*)(&strtok_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strcasecmp exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_fce44 && [1/2] Building C object CMakeFiles\cmTC_fce44.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_fce44.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_fce44.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_fce44.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'strcasecmp': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcasecmp
+  return ((int*)(&strcasecmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the alarm exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b85ed && [1/2] Building C object CMakeFiles\cmTC_b85ed.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_b85ed.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_b85ed.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_b85ed.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'alarm': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef alarm
+  return ((int*)(&alarm))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getppid exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a9c81 && [1/2] Building C object CMakeFiles\cmTC_a9c81.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_a9c81.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_a9c81.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_a9c81.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'getppid': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getppid
+  return ((int*)(&getppid))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the utimes exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ec3bc && [1/2] Building C object CMakeFiles\cmTC_ec3bc.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_ec3bc.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_ec3bc.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_ec3bc.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'utimes': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef utimes
+  return ((int*)(&utimes))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getpwuid_r exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9e680 && [1/2] Building C object CMakeFiles\cmTC_9e680.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_9e680.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_9e680.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_9e680.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'getpwuid_r': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpwuid_r
+  return ((int*)(&getpwuid_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strerror_r exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_81c7d && [1/2] Building C object CMakeFiles\cmTC_81c7d.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_81c7d.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_81c7d.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_81c7d.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'strerror_r': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strerror_r
+  return ((int*)(&strerror_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the siginterrupt exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ecf84 && [1/2] Building C object CMakeFiles\cmTC_ecf84.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_ecf84.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_ecf84.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_ecf84.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'siginterrupt': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef siginterrupt
+  return ((int*)(&siginterrupt))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the pipe exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5629f && [1/2] Building C object CMakeFiles\cmTC_5629f.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_5629f.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_5629f.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_5629f.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'pipe': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pipe
+  return ((int*)(&pipe))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the ftruncate exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_25c3b && [1/2] Building C object CMakeFiles\cmTC_25c3b.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_25c3b.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_25c3b.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_25c3b.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'ftruncate': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ftruncate
+  return ((int*)(&ftruncate))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the if_nametoindex exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ee783 && [1/2] Building C object CMakeFiles\cmTC_ee783.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_ee783.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_ee783.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_ee783.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'if_nametoindex': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef if_nametoindex
+  return ((int*)(&if_nametoindex))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getrlimit exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_cd7c6 && [1/2] Building C object CMakeFiles\cmTC_cd7c6.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_cd7c6.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_cd7c6.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_cd7c6.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'getrlimit': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrlimit
+  return ((int*)(&getrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setrlimit exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_21042 && [1/2] Building C object CMakeFiles\cmTC_21042.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_21042.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_21042.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_21042.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'setrlimit': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setrlimit
+  return ((int*)(&setrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the snprintf exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0cfdb && [1/2] Building C object CMakeFiles\cmTC_0cfdb.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_0cfdb.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_0cfdb.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_0cfdb.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'snprintf': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef snprintf
+  return ((int*)(&snprintf))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function mach_absolute_time exists failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_06bf9 && [1/2] Building C object CMakeFiles\cmTC_06bf9.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_06bf9.exe
+FAILED: cmTC_06bf9.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_06bf9.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_06bf9.dir\CheckFunctionExists.c.obj  /out:cmTC_06bf9.exe /implib:cmTC_06bf9.lib /pdb:cmTC_06bf9.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_06bf9.dir\CheckFunctionExists.c.obj /out:cmTC_06bf9.exe /implib:cmTC_06bf9.lib /pdb:cmTC_06bf9.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_06bf9.dir/intermediate.manifest CMakeFiles\cmTC_06bf9.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol mach_absolute_time referenced in function main
+cmTC_06bf9.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the fsetxattr exist failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9152a && [1/2] Building C object CMakeFiles\cmTC_9152a.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_9152a.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_9152a.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_9152a.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(26): error C2065: 'fsetxattr': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <stddef.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fsetxattr
+  return ((int*)(&fsetxattr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining size of sa_family_t failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3bdab && [1/2] Building C object CMakeFiles\cmTC_3bdab.dir\SIZEOF_SA_FAMILY_T.c.obj
+FAILED: CMakeFiles/cmTC_3bdab.dir/SIZEOF_SA_FAMILY_T.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_3bdab.dir\SIZEOF_SA_FAMILY_T.c.obj /FdCMakeFiles\cmTC_3bdab.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SA_FAMILY_T.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_SA_FAMILY_T.c(3): fatal error C1083: Cannot open include file: 'sys/socket.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CheckTypeSize/SIZEOF_SA_FAMILY_T.c:
+#include <sys/types.h>
+#include <stddef.h>
+#include "sys/socket.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(sa_family_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of ADDRESS_FAMILY failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_1105a && [1/2] Building C object CMakeFiles\cmTC_1105a.dir\SIZEOF_ADDRESS_FAMILY.c.obj
+FAILED: CMakeFiles/cmTC_1105a.dir/SIZEOF_ADDRESS_FAMILY.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_1105a.dir\SIZEOF_ADDRESS_FAMILY.c.obj /FdCMakeFiles\cmTC_1105a.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CheckTypeSize\SIZEOF_ADDRESS_FAMILY.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\ws2def.h(47): fatal error C1189: #error:  Do not include winsock.h and ws2def.h in the same module. Instead include only winsock2.h.
+ninja: build stopped: subcommand failed.
+
+
+G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CheckTypeSize/SIZEOF_ADDRESS_FAMILY.c:
+#include <sys/types.h>
+#include <stddef.h>
+#include "ws2def.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ADDRESS_FAMILY))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing Curl Test HAVE_FCNTL_O_NONBLOCK failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_98543 && [1/2] Building C object CMakeFiles\cmTC_98543.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_98543.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_FCNTL_O_NONBLOCK  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_98543.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_98543.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(46): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_eb445 && [1/2] Building C object CMakeFiles\cmTC_eb445.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_eb445.exe
+FAILED: cmTC_eb445.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_eb445.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_eb445.dir\CurlTests.c.obj  /out:cmTC_eb445.exe /implib:cmTC_eb445.lib /pdb:cmTC_eb445.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_eb445.dir\CurlTests.c.obj /out:cmTC_eb445.exe /implib:cmTC_eb445.lib /pdb:cmTC_eb445.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_eb445.dir/intermediate.manifest CMakeFiles\cmTC_eb445.dir/manifest.res" failed (exit code 1120) with the following output:
+CurlTests.c.obj : error LNK2019: unresolved external symbol IoctlSocket referenced in function main
+cmTC_eb445.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_441a6 && [1/2] Building C object CMakeFiles\cmTC_441a6.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_441a6.exe
+FAILED: cmTC_441a6.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_441a6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_441a6.dir\CurlTests.c.obj  /out:cmTC_441a6.exe /implib:cmTC_441a6.lib /pdb:cmTC_441a6.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_441a6.dir\CurlTests.c.obj /out:cmTC_441a6.exe /implib:cmTC_441a6.lib /pdb:cmTC_441a6.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_441a6.dir/intermediate.manifest CMakeFiles\cmTC_441a6.dir/manifest.res" failed (exit code 1120) with the following output:
+CurlTests.c.obj : error LNK2019: unresolved external symbol IoctlSocket referenced in function main
+cmTC_441a6.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_IOCTL_FIONBIO failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d3c38 && [1/2] Building C object CMakeFiles\cmTC_d3c38.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_d3c38.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_IOCTL_FIONBIO  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_d3c38.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_d3c38.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(323): error C2065: 'FIONBIO': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_IOCTL_SIOCGIFADDR failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_63bc1 && [1/2] Building C object CMakeFiles\cmTC_63bc1.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_63bc1.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_IOCTL_SIOCGIFADDR  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_63bc1.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_63bc1.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(348): fatal error C1083: Cannot open include file: 'net/if.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b7348 && [1/2] Building C object CMakeFiles\cmTC_b7348.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_b7348.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_SETSOCKOPT_SO_NONBLOCK  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_b7348.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_b7348.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(384): error C2065: 'SO_NONBLOCK': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_FILE_OFFSET_BITS failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_54086 && [1/2] Building C object CMakeFiles\cmTC_54086.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_54086.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_FILE_OFFSET_BITS  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_54086.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_54086.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(198): warning C4293: '<<': shift count negative or too big, undefined behavior
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(199): warning C4293: '<<': shift count negative or too big, undefined behavior
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(200): error C2118: negative subscript
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_VARIADIC_MACROS_GCC failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_fd517 && [1/2] Building C object CMakeFiles\cmTC_fd517.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_fd517.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_VARIADIC_MACROS_GCC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_fd517.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_fd517.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(475): error C2010: '.': unexpected in macro parameter list
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(476): error C2010: '.': unexpected in macro parameter list
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_ATOMIC failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b81dd && [1/2] Building C object CMakeFiles\cmTC_b81dd.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_b81dd.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_ATOMIC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_b81dd.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_b81dd.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(512): error C2065: '_Atomic': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(512): error C2143: syntax error: missing ';' before 'type'
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_GLIBC_STRERROR_R failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b460c && [1/2] Building C object CMakeFiles\cmTC_b460c.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_b460c.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_GLIBC_STRERROR_R  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_b460c.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_b460c.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(400): error C2109: subscript requires array or pointer type
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(400): error C2198: 'check': too few arguments for call
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_POSIX_STRERROR_R failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d530f && [1/2] Building C object CMakeFiles\cmTC_d530f.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_d530f.exe
+FAILED: cmTC_d530f.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_d530f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_d530f.dir\CurlTests.c.obj  /out:cmTC_d530f.exe /implib:cmTC_d530f.lib /pdb:cmTC_d530f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_d530f.dir\CurlTests.c.obj /out:cmTC_d530f.exe /implib:cmTC_d530f.lib /pdb:cmTC_d530f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_d530f.dir/intermediate.manifest CMakeFiles\cmTC_d530f.dir/manifest.res" failed (exit code 1120) with the following output:
+CurlTests.c.obj : error LNK2019: unresolved external symbol strerror_r referenced in function main
+cmTC_d530f.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_CLOCK_GETTIME_MONOTONIC failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2d3fc && [1/2] Building C object CMakeFiles\cmTC_2d3fc.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_2d3fc.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_CLOCK_GETTIME_MONOTONIC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_2d3fc.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_2d3fc.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(440): error C2065: 'CLOCK_MONOTONIC': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_BUILTIN_AVAILABLE failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_328cd && [1/2] Building C object CMakeFiles\cmTC_328cd.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_328cd.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_BUILTIN_AVAILABLE  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_STDDEF_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_328cd.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_328cd.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(447): error C2065: 'macOS': undeclared identifier
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(447): error C2143: syntax error: missing ')' before 'constant'
+G:\GITHUB\GitHubDesktop\curl\CMake\CurlTests.c(447): error C2059: syntax error: ')'
+ninja: build stopped: subcommand failed.
+
+
+Performing C SOURCE FILE Test HAVE_MSG_NOSIGNAL failed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0e111 && [1/2] Building C object CMakeFiles\cmTC_0e111.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_0e111.dir/src.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo -DHAVE_MSG_NOSIGNAL -IG:\GITHUB\GitHubDesktop\curl\include /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_0e111.dir\src.c.obj /FdCMakeFiles\cmTC_0e111.dir\cmTC_0e111.pdb /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\src.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\src.c(8): error C2065: 'MSG_NOSIGNAL': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+  int main(void) {
+    int flag = MSG_NOSIGNAL;
+    (void)flag;
+    return 0;
+  }
+Performing C SOURCE FILE Test HAVE_POLL_FINE failed with the following compile output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c5294 && [1/2] Building C object CMakeFiles\cmTC_c5294.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_c5294.dir/src.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo -DHAVE_POLL_FINE -IG:\GITHUB\GitHubDesktop\curl\include /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_c5294.dir\src.c.obj /FdCMakeFiles\cmTC_c5294.dir\ /FS -c G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\src.c
+G:\GITHUB\GitHubDesktop\curl\out\build\x64-Release\CMakeFiles\CMakeTmp\src.c(3): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+      #include <stdlib.h>
+      #include <sys/time.h>
+
+      #ifdef HAVE_SYS_POLL_H
+      #  include <sys/poll.h>
+      #elif  HAVE_POLL_H
+      #  include <poll.h>
+      #endif
+
+      int main(void)
+      {
+          if(0 != poll(0, 0, 10)) {
+            return 1; /* fail */
+          }
+          else {
+            /* detect the 10.12 poll() breakage */
+            struct timeval before, after;
+            int rc;
+            size_t us;
+
+            gettimeofday(&before, NULL);
+            rc = poll(NULL, 0, 500);
+            gettimeofday(&after, NULL);
+
+            us = (after.tv_sec - before.tv_sec) * 1000000 +
+              (after.tv_usec - before.tv_usec);
+
+            if(us < 400000) {
+              return 1;
+            }
+          }
+          return 0;
+    }
