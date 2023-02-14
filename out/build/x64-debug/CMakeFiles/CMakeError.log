@@ -580,3 +580,71 @@ Source:
 
 int main(void){return 0;}
 
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;ssl.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c9b9e && [1/2] Building C object CMakeFiles\cmTC_c9b9e.dir\HAVE_SSL_H.c.obj
+FAILED: CMakeFiles/cmTC_c9b9e.dir/HAVE_SSL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_c9b9e.dir\HAVE_SSL_H.c.obj /FdCMakeFiles\cmTC_c9b9e.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SSL_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SSL_H.c(17): fatal error C1083: Cannot open include file: 'ssl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdio.h;stdlib.h;string.h;stropts.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_26fb9 && [1/2] Building C object CMakeFiles\cmTC_26fb9.dir\HAVE_STROPTS_H.c.obj
+FAILED: CMakeFiles/cmTC_26fb9.dir/HAVE_STROPTS_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_26fb9.dir\HAVE_STROPTS_H.c.obj /FdCMakeFiles\cmTC_26fb9.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_STROPTS_H.c(21): fatal error C1083: Cannot open include file: 'stropts.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stropts.h>
+
+
+int main(void){return 0;}
+

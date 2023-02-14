@@ -119,3 +119,11 @@ Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Com
 
 
 
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f8b89 && [1/2] Building C object CMakeFiles\cmTC_f8b89.dir\HAVE_STDBOOL_H.c.obj
+[2/2] Linking C executable cmTC_f8b89.exe
+
+
+
