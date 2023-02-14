@@ -1331,3 +1331,27 @@ int main(int argc, char** argv)
   return 0;
 #endif
 }
+Performing Curl Test HAVE_WIN32_WINNT passed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f504a && [1/2] Building C object CMakeFiles\cmTC_f504a.dir\CurlTests.c.obj
+_WIN32_WINNT=0x0A00
+[2/2] Linking C executable cmTC_f504a.exe
+
+
+Performing Curl Test HAVE_WIN32_WINNT passed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_22fa4 && [1/2] Building C object CMakeFiles\cmTC_22fa4.dir\CurlTests.c.obj
+_WIN32_WINNT=0x0A00
+[2/2] Linking C executable cmTC_22fa4.exe
+
+
+Performing Curl Test HAVE_WIN32_WINNT passed with the following output:
+Change Dir: G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_39c8d && [1/2] Building C object CMakeFiles\cmTC_39c8d.dir\CurlTests.c.obj
+_WIN32_WINNT=0x0A00
+[2/2] Linking C executable cmTC_39c8d.exe
+
+

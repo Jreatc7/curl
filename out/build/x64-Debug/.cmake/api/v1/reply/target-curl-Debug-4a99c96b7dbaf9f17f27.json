@@ -82,7 +82,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W4 /MP /Zi /O2 /Ob1 /DNDEBUG -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /W4 /MP /Zi /Ob0 /Od /RTC1 -MDd"
 				}
 			],
 			"defines" : 
@@ -112,11 +112,11 @@
 				},
 				{
 					"backtrace" : 8,
-					"path" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/lib"
+					"path" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Debug/lib"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/include"
+					"path" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Debug/include"
 				},
 				{
 					"backtrace" : 8,
@@ -178,7 +178,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DWIN32 -DCURL_EMBED_MANIFEST"
+					"fragment" : "-DWIN32 -DCURL_EMBED_MANIFEST -D_DEBUG"
 				}
 			],
 			"defines" : 
@@ -208,11 +208,11 @@
 				},
 				{
 					"backtrace" : 8,
-					"path" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/lib"
+					"path" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Debug/lib"
 				},
 				{
 					"backtrace" : 8,
-					"path" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/include"
+					"path" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Debug/include"
 				},
 				{
 					"backtrace" : 8,
@@ -245,7 +245,7 @@
 		],
 		"prefix" : 
 		{
-			"path" : "G:/GITHUB/GitHubDesktop/curl/out/install/x64-Release"
+			"path" : "G:/GITHUB/GitHubDesktop/curl/out/install/x64-debug"
 		}
 	},
 	"link" : 
@@ -253,7 +253,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W4 /MP /Zi /O2 /Ob1 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /W4 /MP /Zi /Ob0 /Od /RTC1 -MDd",
 				"role" : "flags"
 			},
 			{
@@ -262,7 +262,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "lib\\libcurl_imp.lib",
+				"fragment" : "lib\\libcurl-d_imp.lib",
 				"role" : "libraries"
 			},
 			{
@@ -557,7 +557,7 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "out/build/x64-Release/src/tool_hugehelp.c",
+			"path" : "out/build/x64-Debug/src/tool_hugehelp.c",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -924,7 +924,7 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "out/build/x64-Release/src/tool_hugehelp.c.rule",
+			"path" : "out/build/x64-Debug/src/tool_hugehelp.c.rule",
 			"sourceGroupIndex" : 4
 		}
 	],

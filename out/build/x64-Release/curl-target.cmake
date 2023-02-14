@@ -49,10 +49,10 @@ unset(_cmake_expected_targets)
 # Create imported target CURL::curl
 add_executable(CURL::curl IMPORTED)
 
-# Import target "CURL::curl" for configuration "RelWithDebInfo"
-set_property(TARGET CURL::curl APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+# Import target "CURL::curl" for configuration "Release"
+set_property(TARGET CURL::curl APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(CURL::curl PROPERTIES
-  IMPORTED_LOCATION_RELWITHDEBINFO "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/src/curl.exe"
+  IMPORTED_LOCATION_RELEASE "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/src/curl.exe"
   )
 
 # This file does not depend on other imported targets which have

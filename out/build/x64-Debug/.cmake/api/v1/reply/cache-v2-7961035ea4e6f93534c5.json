@@ -51,7 +51,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "RelWithDebInfo"
+			"value" : "Debug"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -63,7 +63,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "g:/GITHUB/GitHubDesktop/curl/out/build/x64-Release"
+			"value" : "g:/GITHUB/GitHubDesktop/curl/out/build/x64-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -138,6 +138,18 @@
 			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe"
 		},
 		{
+			"name" : "CMAKE_CXX_COMPILER",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "STRING",
+			"value" : "cl.exe"
+		},
+		{
 			"name" : "CMAKE_C_COMPILER",
 			"properties" : 
 			[
@@ -147,11 +159,11 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "STRING",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.33.31629/bin/HostX64/x64/cl.exe"
+			"value" : "cl.exe"
 		},
 		{
 			"name" : "CMAKE_C_FLAGS",
@@ -379,7 +391,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/pkgRedirects"
+			"value" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -679,7 +691,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "G:/GITHUB/GitHubDesktop/curl/out/install/x64-Release"
+			"value" : "G:/GITHUB/GitHubDesktop/curl/out/install/x64-debug"
 		},
 		{
 			"name" : "CMAKE_INSTALL_RUNSTATEDIR",
@@ -1303,7 +1315,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release"
+			"value" : "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Debug"
 		},
 		{
 			"name" : "CURL_BROTLI",
@@ -1951,7 +1963,7 @@
 			[
 				{
 					"name" : "HELPSTRING",
-					"value" : "Minimum target Windows version as hex string"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
 			"type" : "STRING",
@@ -3879,7 +3891,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "G:/GITHUB/GitHubDesktop/curl/out/install/x64-Release"
+			"value" : "G:/GITHUB/GitHubDesktop/curl/out/install/x64-debug"
 		}
 	],
 	"kind" : "cache",

@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "G:/GITHUB/GitHubDesktop/curl/out/install/x64-Release")
+  set(CMAKE_INSTALL_PREFIX "G:/GITHUB/GitHubDesktop/curl/out/install/x64-release")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "RelWithDebInfo")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -72,8 +72,8 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     unset(_cmake_export_file_changed)
   endif()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/CURL" TYPE FILE FILES "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/Export/8e83d16133499b505bf3986f4f209a65/CURLTargets.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ww][Ii][Tt][Hh][Dd][Ee][Bb][Ii][Nn][Ff][Oo])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/CURL" TYPE FILE FILES "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/Export/8e83d16133499b505bf3986f4f209a65/CURLTargets-relwithdebinfo.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/CURL" TYPE FILE FILES "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/CMakeFiles/Export/8e83d16133499b505bf3986f4f209a65/CURLTargets-release.cmake")
   endif()
 endif()
 

@@ -81,7 +81,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "curl::@145eef247bfb46b6828c",
-					"jsonFile" : "target-curl-Debug-378432d67eaa47228f6e.json",
+					"jsonFile" : "target-curl-Debug-4a99c96b7dbaf9f17f27.json",
 					"name" : "curl",
 					"projectIndex" : 0
 				},
@@ -95,7 +95,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "libcurl::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-libcurl-Debug-84644a09b01b975bba53.json",
+					"jsonFile" : "target-libcurl-Debug-3a8f74bfb497b1e2ef51.json",
 					"name" : "libcurl",
 					"projectIndex" : 0
 				}

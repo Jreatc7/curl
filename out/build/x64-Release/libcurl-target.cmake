@@ -53,11 +53,11 @@ set_target_properties(CURL::libcurl PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "G:/GITHUB/GitHubDesktop/curl/include"
 )
 
-# Import target "CURL::libcurl" for configuration "RelWithDebInfo"
-set_property(TARGET CURL::libcurl APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+# Import target "CURL::libcurl" for configuration "Release"
+set_property(TARGET CURL::libcurl APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(CURL::libcurl PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/lib/libcurl_imp.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/lib/libcurl.dll"
+  IMPORTED_IMPLIB_RELEASE "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/lib/libcurl_imp.lib"
+  IMPORTED_LOCATION_RELEASE "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Release/lib/libcurl.dll"
   )
 
 # This file does not depend on other imported targets which have

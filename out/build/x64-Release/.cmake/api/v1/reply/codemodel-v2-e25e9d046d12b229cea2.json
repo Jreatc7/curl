@@ -12,7 +12,7 @@
 						2
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-RelWithDebInfo-a7b9e6e2a46d28daa0f8.json",
+					"jsonFile" : "directory-.-Release-a7b9e6e2a46d28daa0f8.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.2"
@@ -27,7 +27,7 @@
 				{
 					"build" : "lib",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-lib-RelWithDebInfo-a9bc9b437354ad8f7931.json",
+					"jsonFile" : "directory-lib-Release-a9bc9b437354ad8f7931.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.2"
@@ -43,7 +43,7 @@
 				{
 					"build" : "src",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-src-RelWithDebInfo-e5b405147fdde9ab212b.json",
+					"jsonFile" : "directory-src-Release-e5b405147fdde9ab212b.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.2"
@@ -57,7 +57,7 @@
 					]
 				}
 			],
-			"name" : "RelWithDebInfo",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -81,21 +81,21 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "curl::@145eef247bfb46b6828c",
-					"jsonFile" : "target-curl-RelWithDebInfo-8115ea2c65ea7702a951.json",
+					"jsonFile" : "target-curl-Release-2c5b063dba76f4feed58.json",
 					"name" : "curl",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "curl_uninstall::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-curl_uninstall-RelWithDebInfo-36c7a0654e2cb6813724.json",
+					"jsonFile" : "target-curl_uninstall-Release-36c7a0654e2cb6813724.json",
 					"name" : "curl_uninstall",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "libcurl::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-libcurl-RelWithDebInfo-fab47a3dcfa174c7caa9.json",
+					"jsonFile" : "target-libcurl-Release-bcaf224f303d4c1d5412.json",
 					"name" : "libcurl",
 					"projectIndex" : 0
 				}

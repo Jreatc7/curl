@@ -26,7 +26,7 @@ if(NOT EXISTS "G:/GITHUB/GitHubDesktop/curl/out/build/x64-Debug/install_manifest
 endif()
 
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "G:/GITHUB/GitHubDesktop/curl/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "G:/GITHUB/GitHubDesktop/curl/out/install/x64-debug")
 endif()
 message(${CMAKE_INSTALL_PREFIX})
 
