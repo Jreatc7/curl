@@ -1,0 +1,582 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_1b825 && [1/2] Building C object CMakeFiles\cmTC_1b825.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_1b825.dir/src.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_1b825.dir\src.c.obj /FdCMakeFiles\cmTC_1b825.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CMakeTmp\src.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CMakeTmp\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3ea8f && [1/2] Building C object CMakeFiles\cmTC_3ea8f.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_3ea8f.exe
+FAILED: cmTC_3ea8f.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3ea8f.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_3ea8f.dir\CheckFunctionExists.c.obj  /out:cmTC_3ea8f.exe /implib:cmTC_3ea8f.lib /pdb:cmTC_3ea8f.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_3ea8f.dir\CheckFunctionExists.c.obj /out:cmTC_3ea8f.exe /implib:cmTC_3ea8f.lib /pdb:cmTC_3ea8f.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_3ea8f.dir/intermediate.manifest CMakeFiles\cmTC_3ea8f.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'pthreads.lib'
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5b04e && [1/2] Building C object CMakeFiles\cmTC_5b04e.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_5b04e.exe
+FAILED: cmTC_5b04e.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_5b04e.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_5b04e.dir\CheckFunctionExists.c.obj  /out:cmTC_5b04e.exe /implib:cmTC_5b04e.lib /pdb:cmTC_5b04e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_5b04e.dir\CheckFunctionExists.c.obj /out:cmTC_5b04e.exe /implib:cmTC_5b04e.lib /pdb:cmTC_5b04e.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_5b04e.dir/intermediate.manifest CMakeFiles\cmTC_5b04e.dir/manifest.res" failed (exit code 1104) with the following output:
+LINK : fatal error LNK1104: cannot open file 'pthread.lib'
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files ;winldap.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_16344 && [1/2] Building C object CMakeFiles\cmTC_16344.dir\HAVE_WINLDAP_H.c.obj
+FAILED: CMakeFiles/cmTC_16344.dir/HAVE_WINLDAP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_16344.dir\HAVE_WINLDAP_H.c.obj /FdCMakeFiles\cmTC_16344.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_WINLDAP_H.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winnt.h(169): fatal error C1189: #error:  "No Target Architecture"
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <winldap.h>
+
+
+int main(void){return 0;}
+
+Determining if files ;winber.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6e23e && [1/2] Building C object CMakeFiles\cmTC_6e23e.dir\HAVE_WINBER_H.c.obj
+FAILED: CMakeFiles/cmTC_6e23e.dir/HAVE_WINBER_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_6e23e.dir\HAVE_WINBER_H.c.obj /FdCMakeFiles\cmTC_6e23e.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_WINBER_H.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(67): error C2061: syntax error: identifier 'BerElement'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(67): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(67): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(67): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(67): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(76): error C2061: syntax error: identifier 'VOID'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(76): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(76): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(76): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(76): error C2146: syntax error: missing ';' before identifier 'fbuf'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(76): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(84): error C2061: syntax error: identifier 'VOID'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(84): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(84): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(84): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(84): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(91): error C2061: syntax error: identifier 'VOID'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(91): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(91): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(91): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(91): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(97): error C2061: syntax error: identifier 'BERVAL'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(97): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(97): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(97): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(97): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(108): error C2061: syntax error: identifier 'BerElement'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(108): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(108): error C2146: syntax error: missing ')' before identifier 'options'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(108): error C2061: syntax error: identifier 'options'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(108): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(124): error C2061: syntax error: identifier 'ULONG'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(124): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(124): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(124): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(124): error C2143: syntax error: missing ';' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(124): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(135): error C2061: syntax error: identifier 'ULONG'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(135): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(135): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(135): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(135): error C2143: syntax error: missing ';' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(135): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(146): error C2061: syntax error: identifier 'ULONG'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(146): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(146): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(146): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(146): error C2143: syntax error: missing ';' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(146): error C2146: syntax error: missing ';' before identifier 'CHAR'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(146): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(156): error C2061: syntax error: identifier 'ULONG'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(156): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(156): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(156): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(156): error C2143: syntax error: missing ';' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(156): error C2146: syntax error: missing ';' before identifier 'CHAR'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(156): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(165): error C2061: syntax error: identifier 'INT'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(165): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(165): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(165): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(165): error C2143: syntax error: missing ';' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(165): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(248): error C2061: syntax error: identifier 'INT'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(248): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(248): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(248): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(248): error C2146: syntax error: missing ';' before identifier 'PSTR'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(248): error C2061: syntax error: identifier 'fmt'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(248): error C2059: syntax error: ','
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(248): error C2059: syntax error: ')'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(340): error C2061: syntax error: identifier 'ULONG'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(340): error C2059: syntax error: ';'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(340): error C2143: syntax error: missing ')' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(340): error C2143: syntax error: missing '{' before '*'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(340): error C2146: syntax error: missing ';' before identifier 'PSTR'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(340): error C2061: syntax error: identifier 'fmt'
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(340): error C2059: syntax error: ','
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winber.h(340): error C2059: syntax error: ')'
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <winber.h>
+
+
+int main(void){return 0;}
+
+Determining if files ;ldap_ssl.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_bd6a2 && [1/2] Building C object CMakeFiles\cmTC_bd6a2.dir\HAVE_LDAP_SSL_H.c.obj
+FAILED: CMakeFiles/cmTC_bd6a2.dir/HAVE_LDAP_SSL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_bd6a2.dir\HAVE_LDAP_SSL_H.c.obj /FdCMakeFiles\cmTC_bd6a2.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_LDAP_SSL_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_LDAP_SSL_H.c(2): fatal error C1083: Cannot open include file: 'ldap_ssl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <ldap_ssl.h>
+
+
+int main(void){return 0;}
+
+Determining if files ;ldapssl.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_1f044 && [1/2] Building C object CMakeFiles\cmTC_1f044.dir\HAVE_LDAPSSL_H.c.obj
+FAILED: CMakeFiles/cmTC_1f044.dir/HAVE_LDAPSSL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_1f044.dir\HAVE_LDAPSSL_H.c.obj /FdCMakeFiles\cmTC_1f044.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_LDAPSSL_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_LDAPSSL_H.c(2): fatal error C1083: Cannot open include file: 'ldapssl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <ldapssl.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/filio.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_94740 && [1/2] Building C object CMakeFiles\cmTC_94740.dir\HAVE_SYS_FILIO_H.c.obj
+FAILED: CMakeFiles/cmTC_94740.dir/HAVE_SYS_FILIO_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_94740.dir\HAVE_SYS_FILIO_H.c.obj /FdCMakeFiles\cmTC_94740.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_FILIO_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_FILIO_H.c(7): fatal error C1083: Cannot open include file: 'sys/filio.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/filio.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/ioctl.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b4aa2 && [1/2] Building C object CMakeFiles\cmTC_b4aa2.dir\HAVE_SYS_IOCTL_H.c.obj
+FAILED: CMakeFiles/cmTC_b4aa2.dir/HAVE_SYS_IOCTL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_b4aa2.dir\HAVE_SYS_IOCTL_H.c.obj /FdCMakeFiles\cmTC_b4aa2.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_IOCTL_H.c(7): fatal error C1083: Cannot open include file: 'sys/ioctl.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/ioctl.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/resource.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_272ab && [1/2] Building C object CMakeFiles\cmTC_272ab.dir\HAVE_SYS_RESOURCE_H.c.obj
+FAILED: CMakeFiles/cmTC_272ab.dir/HAVE_SYS_RESOURCE_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_272ab.dir\HAVE_SYS_RESOURCE_H.c.obj /FdCMakeFiles\cmTC_272ab.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_RESOURCE_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_RESOURCE_H.c(7): fatal error C1083: Cannot open include file: 'sys/resource.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/resource.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/uio.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_f5d16 && [1/2] Building C object CMakeFiles\cmTC_f5d16.dir\HAVE_SYS_UIO_H.c.obj
+FAILED: CMakeFiles/cmTC_f5d16.dir/HAVE_SYS_UIO_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_f5d16.dir\HAVE_SYS_UIO_H.c.obj /FdCMakeFiles\cmTC_f5d16.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UIO_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UIO_H.c(9): fatal error C1083: Cannot open include file: 'sys/uio.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/un.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d4ecc && [1/2] Building C object CMakeFiles\cmTC_d4ecc.dir\HAVE_SYS_UN_H.c.obj
+FAILED: CMakeFiles/cmTC_d4ecc.dir/HAVE_SYS_UN_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_d4ecc.dir\HAVE_SYS_UN_H.c.obj /FdCMakeFiles\cmTC_d4ecc.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UN_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_UN_H.c(9): fatal error C1083: Cannot open include file: 'sys/un.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/un.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;sys/xattr.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c1d3a && [1/2] Building C object CMakeFiles\cmTC_c1d3a.dir\HAVE_SYS_XATTR_H.c.obj
+FAILED: CMakeFiles/cmTC_c1d3a.dir/HAVE_SYS_XATTR_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_c1d3a.dir\HAVE_SYS_XATTR_H.c.obj /FdCMakeFiles\cmTC_c1d3a.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_XATTR_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_SYS_XATTR_H.c(10): fatal error C1083: Cannot open include file: 'sys/xattr.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <sys/xattr.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;arpa/tftp.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0d6a8 && [1/2] Building C object CMakeFiles\cmTC_0d6a8.dir\HAVE_ARPA_TFTP_H.c.obj
+FAILED: CMakeFiles/cmTC_0d6a8.dir/HAVE_ARPA_TFTP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_0d6a8.dir\HAVE_ARPA_TFTP_H.c.obj /FdCMakeFiles\cmTC_0d6a8.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_TFTP_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_ARPA_TFTP_H.c(10): fatal error C1083: Cannot open include file: 'arpa/tftp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <arpa/tftp.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;idn2.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_becb0 && [1/2] Building C object CMakeFiles\cmTC_becb0.dir\HAVE_IDN2_H.c.obj
+FAILED: CMakeFiles/cmTC_becb0.dir/HAVE_IDN2_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_becb0.dir\HAVE_IDN2_H.c.obj /FdCMakeFiles\cmTC_becb0.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_IDN2_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_IDN2_H.c(13): fatal error C1083: Cannot open include file: 'idn2.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn2.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;ifaddrs.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c75e8 && [1/2] Building C object CMakeFiles\cmTC_c75e8.dir\HAVE_IFADDRS_H.c.obj
+FAILED: CMakeFiles/cmTC_c75e8.dir/HAVE_IFADDRS_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_c75e8.dir\HAVE_IFADDRS_H.c.obj /FdCMakeFiles\cmTC_c75e8.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_IFADDRS_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_IFADDRS_H.c(13): fatal error C1083: Cannot open include file: 'ifaddrs.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <ifaddrs.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;krb.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_73f7c && [1/2] Building C object CMakeFiles\cmTC_73f7c.dir\HAVE_KRB_H.c.obj
+FAILED: CMakeFiles/cmTC_73f7c.dir/HAVE_KRB_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_73f7c.dir\HAVE_KRB_H.c.obj /FdCMakeFiles\cmTC_73f7c.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_KRB_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_KRB_H.c(14): fatal error C1083: Cannot open include file: 'krb.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <krb.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;libgen.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_29839 && [1/2] Building C object CMakeFiles\cmTC_29839.dir\HAVE_LIBGEN_H.c.obj
+FAILED: CMakeFiles/cmTC_29839.dir/HAVE_LIBGEN_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_29839.dir\HAVE_LIBGEN_H.c.obj /FdCMakeFiles\cmTC_29839.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_LIBGEN_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_LIBGEN_H.c(14): fatal error C1083: Cannot open include file: 'libgen.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <libgen.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;netinet/tcp.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b2c6f && [1/2] Building C object CMakeFiles\cmTC_b2c6f.dir\HAVE_NETINET_TCP_H.c.obj
+FAILED: CMakeFiles/cmTC_b2c6f.dir/HAVE_NETINET_TCP_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_b2c6f.dir\HAVE_NETINET_TCP_H.c.obj /FdCMakeFiles\cmTC_b2c6f.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_NETINET_TCP_H.c(15): fatal error C1083: Cannot open include file: 'netinet/tcp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <netinet/tcp.h>
+
+
+int main(void){return 0;}
+
+Determining if the include file linux/tcp.h exists failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_5c9de && [1/2] Building C object CMakeFiles\cmTC_5c9de.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_5c9de.dir/CheckIncludeFile.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_5c9de.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_5c9de.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'linux/tcp.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;pem.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_29823 && [1/2] Building C object CMakeFiles\cmTC_29823.dir\HAVE_PEM_H.c.obj
+FAILED: CMakeFiles/cmTC_29823.dir/HAVE_PEM_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_29823.dir\HAVE_PEM_H.c.obj /FdCMakeFiles\cmTC_29823.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_PEM_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_PEM_H.c(15): fatal error C1083: Cannot open include file: 'pem.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <pem.h>
+
+
+int main(void){return 0;}
+
+Determining if files windows.h;ws2tcpip.h;winsock2.h;wincrypt.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;poll.h exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_91672 && [1/2] Building C object CMakeFiles\cmTC_91672.dir\HAVE_POLL_H.c.obj
+FAILED: CMakeFiles/cmTC_91672.dir/HAVE_POLL_H.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_91672.dir\HAVE_POLL_H.c.obj /FdCMakeFiles\cmTC_91672.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_POLL_H.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-debug\CMakeFiles\CheckIncludeFiles\HAVE_POLL_H.c(15): fatal error C1083: Cannot open include file: 'poll.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Source:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <poll.h>
+
+
+int main(void){return 0;}
+
