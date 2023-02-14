@@ -323,3 +323,567 @@ int main(int argc, char** argv)
   return 0;
 #endif
 }
+Determining if the freeaddrinfo exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a8877 && [1/2] Building C object CMakeFiles\cmTC_a8877.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_a8877.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef freeaddrinfo
+  return ((int*)(&freeaddrinfo))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getprotobyname exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ab93b && [1/2] Building C object CMakeFiles\cmTC_ab93b.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_ab93b.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getprotobyname
+  return ((int*)(&getprotobyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getpeername exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_373d6 && [1/2] Building C object CMakeFiles\cmTC_373d6.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_373d6.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpeername
+  return ((int*)(&getpeername))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getsockname exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_7eab9 && [1/2] Building C object CMakeFiles\cmTC_7eab9.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_7eab9.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getsockname
+  return ((int*)(&getsockname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setlocale exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ae830 && [1/2] Building C object CMakeFiles\cmTC_ae830.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_ae830.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setlocale
+  return ((int*)(&setlocale))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setmode exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3d84f && [1/2] Building C object CMakeFiles\cmTC_3d84f.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_3d84f.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setmode
+  return ((int*)(&setmode))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setsockopt exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a2abd && [1/2] Building C object CMakeFiles\cmTC_a2abd.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_a2abd.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setsockopt
+  return ((int*)(&setsockopt))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the inet_pton exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_94050 && [1/2] Building C object CMakeFiles\cmTC_94050.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_94050.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_pton
+  return ((int*)(&inet_pton))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing Curl Test HAVE_IOCTLSOCKET passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_30e12 && [1/2] Building C object CMakeFiles\cmTC_30e12.dir\CurlTests.c.obj
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(241) : warning C4700: uninitialized local variable 'socket' used
+[2/2] Linking C executable cmTC_30e12.exe
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c795f && [1/2] Building C object CMakeFiles\cmTC_c795f.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_c795f.exe
+
+
+Performing Curl Test HAVE_BOOL_T passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_40094 && [1/2] Building C object CMakeFiles\cmTC_40094.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_40094.exe
+
+
+Performing Curl Test HAVE_VARIADIC_MACROS_C99 passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_33afe && [1/2] Building C object CMakeFiles\cmTC_33afe.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_33afe.exe
+
+
+Determining size of off_t passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_467dc && [1/2] Building C object CMakeFiles\cmTC_467dc.dir\SIZEOF_OFF_T.c.obj
+[2/2] Linking C executable cmTC_467dc.exe
+
+
+
+Determining size of curl_off_t passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_22ca0 && [1/2] Building C object CMakeFiles\cmTC_22ca0.dir\SIZEOF_CURL_OFF_T.c.obj
+[2/2] Linking C executable cmTC_22ca0.exe
+
+
+
+Performing C SOURCE FILE Test curl_cv_recv succeeded with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_87a78 && [1/2] Building C object CMakeFiles\cmTC_87a78.dir\src.c.obj
+[2/2] Linking C static library cmTC_87a78.lib
+
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+    recv(0, 0, 0, 0);
+    return 0;
+}
+Performing C SOURCE FILE Test curl_cv_func_recv_test succeeded with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c68b2 && [1/2] Building C object CMakeFiles\cmTC_c68b2.dir\src.c.obj
+[2/2] Linking C static library cmTC_c68b2.lib
+
+
+Source file was:
+
+    #undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+    #ifdef WINSOCK_API_LINKAGE
+    WINSOCK_API_LINKAGE
+    #endif
+    extern int PASCAL
+    recv(SOCKET, char *, int, int);
+    int main(void) {
+      SOCKET s=0;
+      char * buf=0;
+      int len=0;
+      int flags=0;
+      int res = recv(s, buf, len, flags);
+      (void) res;
+      return 0;
+    }
+Performing C SOURCE FILE Test curl_cv_send succeeded with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3e367 && [1/2] Building C object CMakeFiles\cmTC_3e367.dir\src.c.obj
+[2/2] Linking C static library cmTC_3e367.lib
+
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+    send(0, 0, 0, 0);
+    return 0;
+}
+Performing C SOURCE FILE Test curl_cv_func_send_test succeeded with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ab49f && [1/2] Building C object CMakeFiles\cmTC_ab49f.dir\src.c.obj
+[2/2] Linking C static library cmTC_ab49f.lib
+
+
+Source file was:
+
+    #undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+    #ifdef WINSOCK_API_LINKAGE
+    WINSOCK_API_LINKAGE
+    #endif
+    extern int PASCAL
+    send(SOCKET, const char *, int, int);
+    int main(void) {
+      SOCKET s=0;
+      const char * buf=0;
+      int len=0;
+      int flags=0;
+      int res = send(s, buf, len, flags);
+      (void) res;
+      return 0;
+    }
+Performing C SOURCE FILE Test HAVE_STRUCT_TIMEVAL succeeded with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9cb33 && [1/2] Building C object CMakeFiles\cmTC_9cb33.dir\src.c.obj
+[2/2] Linking C static library cmTC_9cb33.lib
+
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+  struct timeval ts;
+  ts.tv_sec  = 0;
+  ts.tv_usec = 0;
+  (void)ts;
+  return 0;
+}
+Determining size of struct sockaddr_storage passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_eda50 && [1/2] Building C object CMakeFiles\cmTC_eda50.dir\SIZEOF_STRUCT_SOCKADDR_STORAGE.c.obj
+[2/2] Linking C static library cmTC_eda50.lib
+
+
+
+Determining if the CryptAcquireContext exist passed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_cceee && [1/2] Building C object CMakeFiles\cmTC_cceee.dir\CheckSymbolExists.c.obj
+[2/2] Linking C executable cmTC_cceee.exe
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CryptAcquireContext
+  return ((int*)(&CryptAcquireContext))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}

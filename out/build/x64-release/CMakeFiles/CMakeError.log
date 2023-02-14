@@ -1084,3 +1084,831 @@ int main(int argc, char** argv)
   return 0;
 #endif
 }
+Determining if the strerror_r exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_972ae && [1/2] Building C object CMakeFiles\cmTC_972ae.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_972ae.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_972ae.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_972ae.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'strerror_r': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strerror_r
+  return ((int*)(&strerror_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the siginterrupt exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6a5a4 && [1/2] Building C object CMakeFiles\cmTC_6a5a4.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_6a5a4.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_6a5a4.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_6a5a4.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'siginterrupt': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef siginterrupt
+  return ((int*)(&siginterrupt))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the pipe exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2c389 && [1/2] Building C object CMakeFiles\cmTC_2c389.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_2c389.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_2c389.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_2c389.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'pipe': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pipe
+  return ((int*)(&pipe))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the ftruncate exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_1bba1 && [1/2] Building C object CMakeFiles\cmTC_1bba1.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_1bba1.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_1bba1.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_1bba1.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'ftruncate': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ftruncate
+  return ((int*)(&ftruncate))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the if_nametoindex exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a3d63 && [1/2] Building C object CMakeFiles\cmTC_a3d63.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_a3d63.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_a3d63.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_a3d63.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'if_nametoindex': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef if_nametoindex
+  return ((int*)(&if_nametoindex))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the getrlimit exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a1854 && [1/2] Building C object CMakeFiles\cmTC_a1854.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_a1854.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_a1854.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_a1854.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'getrlimit': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getrlimit
+  return ((int*)(&getrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setrlimit exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d48a8 && [1/2] Building C object CMakeFiles\cmTC_d48a8.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_d48a8.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_d48a8.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_d48a8.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'setrlimit': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setrlimit
+  return ((int*)(&setrlimit))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fcntl exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_0dcce && [1/2] Building C object CMakeFiles\cmTC_0dcce.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_0dcce.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_0dcce.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_0dcce.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'fcntl': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fcntl
+  return ((int*)(&fcntl))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the ioctl exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_6a150 && [1/2] Building C object CMakeFiles\cmTC_6a150.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_6a150.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_6a150.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_6a150.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'ioctl': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ioctl
+  return ((int*)(&ioctl))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function mach_absolute_time exists failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_14150 && [1/2] Building C object CMakeFiles\cmTC_14150.dir\CheckFunctionExists.c.obj
+[2/2] Linking C executable cmTC_14150.exe
+FAILED: cmTC_14150.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_14150.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_14150.dir\CheckFunctionExists.c.obj  /out:cmTC_14150.exe /implib:cmTC_14150.lib /pdb:cmTC_14150.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_14150.dir\CheckFunctionExists.c.obj /out:cmTC_14150.exe /implib:cmTC_14150.lib /pdb:cmTC_14150.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_14150.dir/intermediate.manifest CMakeFiles\cmTC_14150.dir/manifest.res" failed (exit code 1120) with the following output:
+CheckFunctionExists.c.obj : error LNK2019: unresolved external symbol mach_absolute_time referenced in function main
+cmTC_14150.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+
+Determining if the fsetxattr exist failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_8a9d8 && [1/2] Building C object CMakeFiles\cmTC_8a9d8.dir\CheckSymbolExists.c.obj
+FAILED: CMakeFiles/cmTC_8a9d8.dir/CheckSymbolExists.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_8a9d8.dir\CheckSymbolExists.c.obj /FdCMakeFiles\cmTC_8a9d8.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\CheckSymbolExists.c(31): error C2065: 'fsetxattr': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+File C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <wincrypt.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fsetxattr
+  return ((int*)(&fsetxattr))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining size of sa_family_t failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a4217 && [1/2] Building C object CMakeFiles\cmTC_a4217.dir\SIZEOF_SA_FAMILY_T.c.obj
+FAILED: CMakeFiles/cmTC_a4217.dir/SIZEOF_SA_FAMILY_T.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_a4217.dir\SIZEOF_SA_FAMILY_T.c.obj /FdCMakeFiles\cmTC_a4217.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CheckTypeSize\SIZEOF_SA_FAMILY_T.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CheckTypeSize\SIZEOF_SA_FAMILY_T.c(3): fatal error C1083: Cannot open include file: 'sys/socket.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CheckTypeSize/SIZEOF_SA_FAMILY_T.c:
+#include <sys/types.h>
+#include <stddef.h>
+#include "sys/socket.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(sa_family_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of ADDRESS_FAMILY failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_7925f && [1/2] Building C object CMakeFiles\cmTC_7925f.dir\SIZEOF_ADDRESS_FAMILY.c.obj
+FAILED: CMakeFiles/cmTC_7925f.dir/SIZEOF_ADDRESS_FAMILY.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_7925f.dir\SIZEOF_ADDRESS_FAMILY.c.obj /FdCMakeFiles\cmTC_7925f.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CheckTypeSize\SIZEOF_ADDRESS_FAMILY.c
+C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\ws2def.h(47): fatal error C1189: #error:  Do not include winsock.h and ws2def.h in the same module. Instead include only winsock2.h.
+ninja: build stopped: subcommand failed.
+
+
+C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CheckTypeSize/SIZEOF_ADDRESS_FAMILY.c:
+#include <sys/types.h>
+#include <stddef.h>
+#include "ws2def.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(ADDRESS_FAMILY))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Performing Curl Test HAVE_FCNTL_O_NONBLOCK failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_66bfe && [1/2] Building C object CMakeFiles\cmTC_66bfe.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_66bfe.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_FCNTL_O_NONBLOCK  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_66bfe.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_66bfe.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(44): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_03aaa && [1/2] Building C object CMakeFiles\cmTC_03aaa.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_03aaa.exe
+FAILED: cmTC_03aaa.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_03aaa.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_03aaa.dir\CurlTests.c.obj  /out:cmTC_03aaa.exe /implib:cmTC_03aaa.lib /pdb:cmTC_03aaa.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_03aaa.dir\CurlTests.c.obj /out:cmTC_03aaa.exe /implib:cmTC_03aaa.lib /pdb:cmTC_03aaa.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_03aaa.dir/intermediate.manifest CMakeFiles\cmTC_03aaa.dir/manifest.res" failed (exit code 1120) with the following output:
+CurlTests.c.obj : error LNK2019: unresolved external symbol IoctlSocket referenced in function main
+cmTC_03aaa.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_77b47 && [1/2] Building C object CMakeFiles\cmTC_77b47.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_77b47.exe
+FAILED: cmTC_77b47.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_77b47.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_77b47.dir\CurlTests.c.obj  /out:cmTC_77b47.exe /implib:cmTC_77b47.lib /pdb:cmTC_77b47.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_77b47.dir\CurlTests.c.obj /out:cmTC_77b47.exe /implib:cmTC_77b47.lib /pdb:cmTC_77b47.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_77b47.dir/intermediate.manifest CMakeFiles\cmTC_77b47.dir/manifest.res" failed (exit code 1120) with the following output:
+CurlTests.c.obj : error LNK2019: unresolved external symbol IoctlSocket referenced in function main
+cmTC_77b47.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_IOCTL_FIONBIO failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_d62a3 && [1/2] Building C object CMakeFiles\cmTC_d62a3.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_d62a3.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_IOCTL_FIONBIO  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_d62a3.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_d62a3.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(343): error C2065: 'FIONBIO': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_IOCTL_SIOCGIFADDR failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2e395 && [1/2] Building C object CMakeFiles\cmTC_2e395.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_2e395.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_IOCTL_SIOCGIFADDR  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_2e395.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_2e395.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(368): fatal error C1083: Cannot open include file: 'net/if.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_973ac && [1/2] Building C object CMakeFiles\cmTC_973ac.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_973ac.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_SETSOCKOPT_SO_NONBLOCK  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_973ac.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_973ac.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(404): error C2065: 'SO_NONBLOCK': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_SOCKADDR_IN6_SIN6_SCOPE_ID failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_bf782 && [1/2] Building C object CMakeFiles\cmTC_bf782.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_bf782.exe
+FAILED: cmTC_bf782.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_bf782.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_bf782.dir\CurlTests.c.obj  /out:cmTC_bf782.exe /implib:cmTC_bf782.lib /pdb:cmTC_bf782.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_bf782.dir\CurlTests.c.obj /out:cmTC_bf782.exe /implib:cmTC_bf782.lib /pdb:cmTC_bf782.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_bf782.dir/intermediate.manifest CMakeFiles\cmTC_bf782.dir/manifest.res" failed (exit code 1120) with the following output:
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+cmTC_bf782.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_FILE_OFFSET_BITS failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3a134 && [1/2] Building C object CMakeFiles\cmTC_3a134.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_3a134.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_FILE_OFFSET_BITS  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_3a134.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_3a134.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(218): warning C4293: '<<': shift count negative or too big, undefined behavior
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(219): warning C4293: '<<': shift count negative or too big, undefined behavior
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(220): error C2118: negative subscript
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_VARIADIC_MACROS_GCC failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_b3711 && [1/2] Building C object CMakeFiles\cmTC_b3711.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_b3711.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_VARIADIC_MACROS_GCC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_b3711.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_b3711.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(495): error C2010: '.': unexpected in macro parameter list
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(496): error C2010: '.': unexpected in macro parameter list
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_GLIBC_STRERROR_R failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_c55a6 && [1/2] Building C object CMakeFiles\cmTC_c55a6.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_c55a6.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_GLIBC_STRERROR_R  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_c55a6.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_c55a6.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(420): error C2109: subscript requires array or pointer type
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(420): error C2198: 'check': too few arguments for call
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_POSIX_STRERROR_R failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_3db24 && [1/2] Building C object CMakeFiles\cmTC_3db24.dir\CurlTests.c.obj
+[2/2] Linking C executable cmTC_3db24.exe
+FAILED: cmTC_3db24.exe 
+cmd.exe /C "cd . && "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_3db24.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100226~1.0\x64\mt.exe --manifests  -- C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_3db24.dir\CurlTests.c.obj  /out:cmTC_3db24.exe /implib:cmTC_3db24.lib /pdb:cmTC_3db24.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  ws2_32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK Pass 1: command "C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\link.exe /nologo CMakeFiles\cmTC_3db24.dir\CurlTests.c.obj /out:cmTC_3db24.exe /implib:cmTC_3db24.lib /pdb:cmTC_3db24.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\cmTC_3db24.dir/intermediate.manifest CMakeFiles\cmTC_3db24.dir/manifest.res" failed (exit code 1120) with the following output:
+CurlTests.c.obj : error LNK2019: unresolved external symbol strerror_r referenced in function main
+cmTC_3db24.exe : fatal error LNK1120: 1 unresolved externals
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_CLOCK_GETTIME_MONOTONIC failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a6b27 && [1/2] Building C object CMakeFiles\cmTC_a6b27.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_a6b27.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_CLOCK_GETTIME_MONOTONIC  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_a6b27.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_a6b27.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(460): error C2065: 'CLOCK_MONOTONIC': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+Performing Curl Test HAVE_BUILTIN_AVAILABLE failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_ed448 && [1/2] Building C object CMakeFiles\cmTC_ed448.dir\CurlTests.c.obj
+FAILED: CMakeFiles/cmTC_ed448.dir/CurlTests.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DHAVE_BUILTIN_AVAILABLE  -DHAVE_WINDOWS_H -DHAVE_WS2TCPIP_H -DHAVE_WINSOCK2_H -DHAVE_WINCRYPT_H -DHAVE_STDIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UTIME_H -DHAVE_ASSERT_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IO_H -DHAVE_LOCALE_H -DHAVE_SETJMP_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_TIME_H -DHAVE_PROCESS_H -DHAVE_STDDEF_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\cmTC_ed448.dir\CurlTests.c.obj /FdCMakeFiles\cmTC_ed448.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(467): error C2065: 'macOS': undeclared identifier
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(467): error C2143: syntax error: missing ')' before 'constant'
+C:\Users\Joe\source\repos\Jreatc7\curl\CMake\CurlTests.c(467): error C2059: syntax error: ')'
+ninja: build stopped: subcommand failed.
+
+
+Performing C SOURCE FILE Test HAVE_MSG_NOSIGNAL failed with the following output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_9f782 && [1/2] Building C object CMakeFiles\cmTC_9f782.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_9f782.dir/src.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo -DHAVE_MSG_NOSIGNAL -IC:\Users\Joe\source\repos\Jreatc7\curl\include /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_9f782.dir\src.c.obj /FdCMakeFiles\cmTC_9f782.dir\cmTC_9f782.pdb /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\src.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\src.c(8): error C2065: 'MSG_NOSIGNAL': undeclared identifier
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+  int main(void) {
+    int flag = MSG_NOSIGNAL;
+    (void)flag;
+    return 0;
+  }
+Performing C SOURCE FILE Test HAVE_POLL_FINE failed with the following compile output:
+Change Dir: C:/Users/Joe/source/repos/Jreatc7/curl/out/build/x64-release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_25bfa && [1/2] Building C object CMakeFiles\cmTC_25bfa.dir\src.c.obj
+FAILED: CMakeFiles/cmTC_25bfa.dir/src.c.obj 
+C:\PROGRA~1\MIB055~1\2022\COMMUN~1\VC\Tools\MSVC\1433~1.316\bin\HostX64\x64\cl.exe  /nologo -DHAVE_POLL_FINE -IC:\Users\Joe\source\repos\Jreatc7\curl\include /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd    -D_WIN32_WINNT=0x0600 -D_WINSOCKAPI_= /showIncludes /FoCMakeFiles\cmTC_25bfa.dir\src.c.obj /FdCMakeFiles\cmTC_25bfa.dir\ /FS -c C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\src.c
+C:\Users\Joe\source\repos\Jreatc7\curl\out\build\x64-release\CMakeFiles\CMakeTmp\src.c(3): fatal error C1083: Cannot open include file: 'sys/time.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+...and run output:
+
+Return value: 1
+Source file was:
+
+    #include <stdlib.h>
+    #include <sys/time.h>
+
+    #ifdef HAVE_SYS_POLL_H
+    #  include <sys/poll.h>
+    #elif  HAVE_POLL_H
+    #  include <poll.h>
+    #endif
+
+    int main(void)
+    {
+        if(0 != poll(0, 0, 10)) {
+          return 1; /* fail */
+        }
+        else {
+          /* detect the 10.12 poll() breakage */
+          struct timeval before, after;
+          int rc;
+          size_t us;
+
+          gettimeofday(&before, NULL);
+          rc = poll(NULL, 0, 500);
+          gettimeofday(&after, NULL);
+
+          us = (after.tv_sec - before.tv_sec) * 1000000 +
+            (after.tv_usec - before.tv_usec);
+
+          if(us < 400000) {
+            return 1;
+          }
+        }
+        return 0;
+    }
